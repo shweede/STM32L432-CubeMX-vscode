@@ -95,7 +95,8 @@ int main(void)
   MX_USART2_UART_Init();
   MX_TIM2_Init();
   /* USER CODE BEGIN 2 */
-
+  uint8_t data = 'a';
+  HAL_UART_Transmit(&huart2, &data, 1, 0xffffffff);
   /* USER CODE END 2 */
 
   /* Infinite loop */
